@@ -80,6 +80,7 @@ a:hover{
 	left: 450px;
 	-webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  outline: none;
 }
 
 #btn1:hover{
@@ -98,6 +99,7 @@ a:hover{
 	left: 810px;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
+	outline: none;
 }
 
 #btn2:hover{

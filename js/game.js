@@ -245,6 +245,7 @@ function zoekEten(){
   btn2.innerHTML = "Ga het keldertje in";
   btn1.onclick = function(){
     if (heeftBrood == true) {
+      console.log("Brood")
       gaWeg();
     } else {
       alert("c`mon mate, go get that food.");
@@ -256,6 +257,7 @@ function zoekEten(){
     }
   btn2.onclick = function(){
     if (heeftBrood == true) {
+      console.log("Brood")
       kelder();
     } else {
       alert("bring the heckin' fooooooooood!");
