@@ -38,6 +38,14 @@ a:hover{
 	border-radius: 10px;
 }
 
+#DancingZombie{
+	height: 80px;
+	width: 50px;
+	position: absolute;
+	top: 320px;
+	left: 650px;
+}
+
 #brood{
 	width: 25px;
 	height: 20px;

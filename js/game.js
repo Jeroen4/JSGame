@@ -1,6 +1,7 @@
 var title = document.getElementById('title');
 var intro = document.getElementById('intro');
 var picture = document.getElementById('picture');
+var DancingZombie = document.getElementById('DancingZombie')
 var btn1 = document.getElementById('btn1');
 var btn2 = document.getElementById('btn2');
 var brood = document.getElementById('brood');
