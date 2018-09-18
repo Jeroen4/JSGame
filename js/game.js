@@ -1,7 +1,7 @@
 var title = document.getElementById('title');
 var intro = document.getElementById('intro');
 var picture = document.getElementById('picture');
-var DancingZombie = document.getElementById('DancingZombie')
+var zombie = document.getElementById('DancingZombie');
 var btn1 = document.getElementById('btn1');
 var btn2 = document.getElementById('btn2');
 var brood = document.getElementById('brood');
@@ -18,6 +18,7 @@ btn2.style.display = "none;"
   btn1.onclick = function(){
   audio.play();
   audio.loop = true;
+  zombie.style.display = "none";
   title.innerHTML = "Je wordt wakker in een verlaten ziekenhuis...";
   intro.innerHTML = "Je besluit de gang op te gaan.";
   picture.src = "img/wakeup.jpg";
