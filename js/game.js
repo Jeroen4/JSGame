@@ -1,6 +1,7 @@
 var title = document.getElementById('title');
 var intro = document.getElementById('intro');
 var picture = document.getElementById('picture');
+var download = document.getElementById('Download');
 var zombie = document.getElementById('DancingZombie');
 var zombie1 = document.getElementById('WalkingZombie');
 var zombie2 = document.getElementById('Zombie');
@@ -21,6 +22,7 @@ btn2.style.display = "none;"
   audio.play();
   audio.loop = true;
   console.log("Start");
+  download.style.display = "none";
   zombie.style.display = "none";
   zombie1.style.display = "none";
   zombie2.style.display = "none";
@@ -116,6 +118,7 @@ function winOne(){
   picture.src = "img/shelter1.jpg"
   btn1.style.display = "none";
   btn2.style.display = "none";
+  download.style.display = "inline";
 }
 
 function winTwo(){
@@ -126,6 +129,7 @@ function winTwo(){
   picture.src = "img/shelter2.jpg";
   btn1.style.display = "none";
   btn2.style.display = "none";
+  download.style.display = "inline";
 }
 
 function winThree(){
@@ -136,6 +140,7 @@ function winThree(){
   picture.src = "img/boven.jpg";
   btn1.style.display = "none";
   btn2.style.display = "none";
+  download.style.display = "inline";
 }
 
 function vluchtgang(){
