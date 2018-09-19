@@ -32,6 +32,7 @@ btn2.style.display = "none;"
   btn1.innerHTML = "Ga de gang op";
   btn2.style.display = "none";
   btn1.onclick = function(){
+    console.log('Je bent in level 1.');
     naarDeGang();
   }
 }
@@ -44,9 +45,11 @@ function naarDeGang() {
   btn2.style.display = "inline";
   btn2.innerHTML = "Vlucht snel de gang uit";
   btn1.onclick = function(){
+    console.log('Je bent in level 2.');
     verstop();
   }
   btn2.onclick = function(){
+    console.log('Je bent in level 2.');
     vluchtgang();
   }
 }
@@ -61,7 +64,7 @@ function verstop() {
 }
 
 function dieOne(){
-  console.log("Dead");
+  console.log("Je bent dood gegaan op level 1.");
   title.innerHTML = "Helaas hebben de zombies je gezien en kon je nergens meer heen...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -71,7 +74,7 @@ function dieOne(){
 }
 
 function dieTwo(){
-  console.log("Dead");
+  console.log("Je bent doodgegaan op level 6.");
   title.innerHTML = "Er zat nog een achtergebleven zombie in de hoek en die had je niet gezien...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -81,7 +84,7 @@ function dieTwo(){
 }
 
 function dieThree(){
-  console.log("Dead");
+  console.log("Je bent doodgegaan op level 7.");
   title.innerHTML = "Je hebt geen eten... Je sterft helaas van de honger.";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -91,7 +94,7 @@ function dieThree(){
 }
 
 function dieFour(){
-  console.log("Dead");
+  console.log("Je bent doodgegaan op level 7.");
   title.innerHTML = "Je hebt een schuilplaats gevonden.";
   intro.innerHTML = "Maar je hebt geen eten en dus ga je de volgende dag niet halen... Had nu maar even naar eten gezocht. Druk op F5 om opnieuw te spelen.";
   picture.src = "img/gameover.png";
@@ -101,7 +104,7 @@ function dieFour(){
 }
 
 function dieFive(){
-  console.log("Dwad");
+  console.log("Je bent doodgegaan op level 7.");
   title.innerHTML = "Je hebt geen schuilplaats kunnen vinden.";
   intro.innerHTML = "Ook heb je geen eten en dus haal je de volgende dag niet... Druk op F5 om opnieuw te spelen.";
   picture.src = "img/gameover.png";
@@ -113,9 +116,9 @@ function dieFive(){
 function winOne(){
   console.log("Win");
   audio.pause();
-  title.innerHTML = "Eindelijk! Na een hele dag zoekend rondstreunen door de stad heb je een schuilplaats gevonden. Er zijn ook nog andere survivors net als jij. Je krijgt ook eten.";
-  intro.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
-  picture.src = "img/shelter1.jpg"
+  title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
+  intro.style.display = "none";
+  picture.src = "img/win.gif"
   btn1.style.display = "none";
   btn2.style.display = "none";
   download.style.display = "inline";
@@ -124,9 +127,9 @@ function winOne(){
 function winTwo(){
   console.log("Win");
   audio.pause();
-  title.innerHTML = "Na een hele dag rondjes om de stad heen lopen heb je een schuilplaats gevonden met zelfs nog enkele overlevers. Ook kun je eindelijk eten.";
-  intro.innerHTML = "Gefeliciteerd, je bent ontsnapt en veilig. Druk op F5 om opnieuw te spelen.";
-  picture.src = "img/shelter2.jpg";
+  title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
+  intro.style.display = "none";
+  picture.src = "img/win.gif";
   btn1.style.display = "none";
   btn2.style.display = "none";
   download.style.display = "inline";
@@ -135,9 +138,9 @@ function winTwo(){
 function winThree(){
   console.log("Win");
   audio.pause();
-  title.innerHTML = "Je bent op het dak...";
-  intro.innerHTML = "Daar staat een helikopter! Je bent ontsnapt!";
-  picture.src = "img/boven.jpg";
+  title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
+  intro.style.display = "none";
+  picture.src = "img/win.gif";
   btn1.style.display = "none";
   btn2.style.display = "none";
   download.style.display = "inline";
@@ -153,6 +156,7 @@ function vluchtgang(){
     winThree();
   }
   btn2.onclick = function(){
+    console.log('Je bent in level 3.');
     beneden();
   }
 }
@@ -165,6 +169,7 @@ function beneden(){
   btn2.style.display = "none";
   btn1.style.display = "inline";
   btn1.onclick = function(){
+    console.log('Je bent in level 4.');
       buiten();
   }
 }
@@ -177,9 +182,11 @@ function buiten(){
   btn2.innerHTML = "Ga de weg op";
   btn2.style.display = "inline";
   btn2.onclick = function(){
+    console.log('Je bent in level 5.');
     snelweg();
    }
    btn1.onclick = function(){
+    console.log('Je bent in level 5.');
      uitweg();
    }
 }
@@ -191,9 +198,11 @@ function snelweg(){
   btn2.innerHTML = "Ga de stad in";
   btn1.innerHTML = "Ga het bos in";
   btn1.onclick = function(){
+    console.log('Je bent in level 6.');
     bos();
   }
   btn2.onclick = function(){
+    console.log('Je bent in level 6.');
     stadIn();
   }
 }
@@ -208,6 +217,7 @@ function bos(){
     dieFour();
   }
   btn2.onclick = function(){
+    console.log('Je bent in level 7.');
     gaTerug();
   }
 }
@@ -219,9 +229,11 @@ function gaTerug(){
   btn2.innerHTML = "Ga de stad in";
   btn1.innerHTML = "Ga het bos in";
   btn1.onclick = function(){
+    console.log('Je bent in level 6.');
     bos();
   }
   btn2.onclick = function(){
+    console.log('Je bent in level 6.');
     stadIn();
   }
 }
@@ -233,6 +245,7 @@ function uitweg(){
   btn1.innerHTML = "Zoek naar eten in de winkel";
   btn2.style.display = "none";
   btn1.onclick = function(){
+    console.log('Je bent in level 6.');
     zoekEten();
   }
 }
@@ -245,6 +258,7 @@ function uitwegTwo(){
   btn2.style.display = "inline";
   btn2.innerHTML = "Ga terug het stadje in";
   btn1.onclick = function(){
+    console.log('Je bent in level 6.');
     zoekEten();
   }
   btn2.onclick = function(){
@@ -264,6 +278,7 @@ function zoekEten(){
   btn2.style.display = "inline";
   btn2.innerHTML = "Ga het keldertje in";
   btn1.onclick = function(){
+    console.log('Je bent in level 8.');
     if (heeftBrood == true) {
       console.log("Brood")
       gaWeg();
@@ -276,6 +291,7 @@ function zoekEten(){
       heeftBrood = true;
     }
   btn2.onclick = function(){
+    console.log('Je bent in level 8.');
     if (heeftBrood == true) {
       console.log("Brood")
       kelder();
@@ -311,6 +327,7 @@ function stadIn(){
     dieFive();
   }
   btn1.onclick = function(){
+    console.log('Je bent in level 7.');
     uitwegTwo();
   }
 }
@@ -328,6 +345,7 @@ function kelder(){
     }
   }
    mars.onclick = function(){
+    console.log('Je bent in level 8.');
      dieTwo();
    mars.style.display = "none";
    heeftMars = true;
