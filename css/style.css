@@ -12,6 +12,7 @@ a{
 	top: 50px;
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
+	width: 50px;
 }
 
 a:hover{
@@ -65,7 +66,7 @@ a:hover{
 #brood{
 	width: 25px;
 	height: 20px;
-  display: none;
+  	display: none;
 	position: absolute;
 	left: 650px;
 	bottom: 370px;
@@ -100,11 +101,11 @@ a:hover{
 	border-color: #990000;
 	color: #ffff33;
 	background-color: rgba(0, 0, 0, 1);
-  position: absolute;
+  	position: absolute;
 	left: 450px;
 	-webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  outline: none;
+  	transition-duration: 0.4s;
+  	outline: none;
 }
 
 #btn1:hover{
