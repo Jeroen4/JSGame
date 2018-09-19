@@ -2,6 +2,8 @@ var title = document.getElementById('title');
 var intro = document.getElementById('intro');
 var picture = document.getElementById('picture');
 var zombie = document.getElementById('DancingZombie');
+var zombie1 = document.getElementById('WalkingZombie');
+var zombie2 = document.getElementById('Zombie');
 var btn1 = document.getElementById('btn1');
 var btn2 = document.getElementById('btn2');
 var brood = document.getElementById('brood');
@@ -18,7 +20,10 @@ btn2.style.display = "none;"
   btn1.onclick = function(){
   audio.play();
   audio.loop = true;
+  console.log("Start");
   zombie.style.display = "none";
+  zombie1.style.display = "none";
+  zombie2.style.display = "none";
   title.innerHTML = "Je wordt wakker in een verlaten ziekenhuis...";
   intro.innerHTML = "Je besluit de gang op te gaan.";
   picture.src = "img/wakeup.jpg";
@@ -54,6 +59,7 @@ function verstop() {
 }
 
 function dieOne(){
+  console.log("Dead");
   title.innerHTML = "Helaas hebben de zombies je gezien en kon je nergens meer heen...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -63,6 +69,7 @@ function dieOne(){
 }
 
 function dieTwo(){
+  console.log("Dead");
   title.innerHTML = "Er zat nog een achtergebleven zombie in de hoek en die had je niet gezien...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -72,6 +79,7 @@ function dieTwo(){
 }
 
 function dieThree(){
+  console.log("Dead");
   title.innerHTML = "Je hebt geen eten... Je sterft helaas van de honger.";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
   picture.src = "img/gameover.png";
@@ -81,6 +89,7 @@ function dieThree(){
 }
 
 function dieFour(){
+  console.log("Dead");
   title.innerHTML = "Je hebt een schuilplaats gevonden.";
   intro.innerHTML = "Maar je hebt geen eten en dus ga je de volgende dag niet halen... Had nu maar even naar eten gezocht. Druk op F5 om opnieuw te spelen.";
   picture.src = "img/gameover.png";
@@ -90,6 +99,7 @@ function dieFour(){
 }
 
 function dieFive(){
+  console.log("Dwad");
   title.innerHTML = "Je hebt geen schuilplaats kunnen vinden.";
   intro.innerHTML = "Ook heb je geen eten en dus haal je de volgende dag niet... Druk op F5 om opnieuw te spelen.";
   picture.src = "img/gameover.png";
@@ -99,6 +109,7 @@ function dieFive(){
 }
 
 function winOne(){
+  console.log("Win");
   audio.pause();
   title.innerHTML = "Eindelijk! Na een hele dag zoekend rondstreunen door de stad heb je een schuilplaats gevonden. Er zijn ook nog andere survivors net als jij. Je krijgt ook eten.";
   intro.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
@@ -108,6 +119,7 @@ function winOne(){
 }
 
 function winTwo(){
+  console.log("Win");
   audio.pause();
   title.innerHTML = "Na een hele dag rondjes om de stad heen lopen heb je een schuilplaats gevonden met zelfs nog enkele overlevers. Ook kun je eindelijk eten.";
   intro.innerHTML = "Gefeliciteerd, je bent ontsnapt en veilig. Druk op F5 om opnieuw te spelen.";
@@ -117,6 +129,7 @@ function winTwo(){
 }
 
 function winThree(){
+  console.log("Win");
   audio.pause();
   title.innerHTML = "Je bent op het dak...";
   intro.innerHTML = "Daar staat een helikopter! Je bent ontsnapt!";

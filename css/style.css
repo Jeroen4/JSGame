@@ -46,6 +46,22 @@ a:hover{
 	left: 650px;
 }
 
+#WalkingZombie{
+	height: 120px;
+	width: 90px;
+	position: absolute;
+	top: 330px;
+	left: 880px;
+}
+
+#Zombie{
+	height: 60px;
+	width: 40px;
+	position: absolute;
+	top: 340px;
+	left: 750px;
+}
+
 #brood{
 	width: 25px;
 	height: 20px;
