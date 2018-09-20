@@ -10,6 +10,8 @@ var btn2 = document.getElementById('btn2');
 var brood = document.getElementById('brood');
 var mars = document.getElementById('mars');
 var audio = new Audio('snd/horrorbg.mp3');
+var goAudio = new Audio('snd/gameOver.mp3');
+var winAudio = new Audio('snd/Win.mp3');
 var heeftBrood = false;
 var heeftMars = false;
 
@@ -65,9 +67,11 @@ function verstop() {
 
 function dieOne(){
   console.log("Je bent dood gegaan op level 1.");
+  audio.pause();
+  goAudio.play();
   title.innerHTML = "Helaas hebben de zombies je gezien en kon je nergens meer heen...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
-  picture.src = "img/gameover.png";
+  picture.src = "img/gameover.gif";
   picture.style.border = "none";
   btn1.style.display = "none";
   btn2.style.display = "none";
@@ -75,9 +79,11 @@ function dieOne(){
 
 function dieTwo(){
   console.log("Je bent doodgegaan op level 6.");
+  audio.pause();
+  goAudio.play();
   title.innerHTML = "Er zat nog een achtergebleven zombie in de hoek en die had je niet gezien...";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
-  picture.src = "img/gameover.png";
+  picture.src = "img/gameover.gif";
   picture.style.border = "none";
   btn1.style.display = "none";
   btn2.style.display = "none";
@@ -85,9 +91,11 @@ function dieTwo(){
 
 function dieThree(){
   console.log("Je bent doodgegaan op level 7.");
+  audio.pause();
+  goAudio.play();
   title.innerHTML = "Je hebt geen eten... Je sterft helaas van de honger.";
   intro.innerHTML = "Druk op F5 om opnieuw te beginnen.";
-  picture.src = "img/gameover.png";
+  picture.src = "img/gameover.gif";
   picture.style.border = "none";
   btn1.style.display = "none";
   btn2.style.display = "none";
@@ -95,9 +103,11 @@ function dieThree(){
 
 function dieFour(){
   console.log("Je bent doodgegaan op level 7.");
+  audio.pause();
+  goAudio.play();
   title.innerHTML = "Je hebt een schuilplaats gevonden.";
   intro.innerHTML = "Maar je hebt geen eten en dus ga je de volgende dag niet halen... Had nu maar even naar eten gezocht. Druk op F5 om opnieuw te spelen.";
-  picture.src = "img/gameover.png";
+  picture.src = "img/gameover.gif";
   picture.style.border = "none";
   btn1.style.display = "none";
   btn2.style.display = "none";
@@ -105,9 +115,11 @@ function dieFour(){
 
 function dieFive(){
   console.log("Je bent doodgegaan op level 7.");
+  audio.pause();
+  goAudio.play();
   title.innerHTML = "Je hebt geen schuilplaats kunnen vinden.";
   intro.innerHTML = "Ook heb je geen eten en dus haal je de volgende dag niet... Druk op F5 om opnieuw te spelen.";
-  picture.src = "img/gameover.png";
+  picture.src = "img/gameover.gif";
   picture.style.border = "none";
   btn1.style.display = "none";
   btn2.style.display = "none";
@@ -116,6 +128,7 @@ function dieFive(){
 function winOne(){
   console.log("Win");
   audio.pause();
+  winAudio.play();
   title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
   intro.style.display = "none";
   picture.src = "img/win.gif"
@@ -127,6 +140,7 @@ function winOne(){
 function winTwo(){
   console.log("Win");
   audio.pause();
+  winAudio.play();
   title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
   intro.style.display = "none";
   picture.src = "img/win.gif";
@@ -138,6 +152,7 @@ function winTwo(){
 function winThree(){
   console.log("Win");
   audio.pause();
+  winAudio.play();
   title.innerHTML = "Gefeliciteerd, je hebt mijn minigame overleeft. Nu maar hopen dat je ook zo goed bent als er een echte apocalypse komt... Druk op F5 om opnieuw te spelen.";
   intro.style.display = "none";
   picture.src = "img/win.gif";
