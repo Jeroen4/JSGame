@@ -12,6 +12,7 @@ var mars = document.getElementById('mars');
 var audio = new Audio('snd/horrorbg.mp3');
 var goAudio = new Audio('snd/gameOver.mp3');
 var winAudio = new Audio('snd/Win.mp3');
+var clickAudio = new Audio('snd/click.mp3');
 var heeftBrood = false;
 var heeftMars = false;
 
@@ -21,6 +22,7 @@ btn2.style.display = "none;"
 
 
   btn1.onclick = function(){
+  clickAudio.play();
   audio.play();
   audio.loop = true;
   console.log("Start");
@@ -35,6 +37,7 @@ btn2.style.display = "none;"
   btn2.style.display = "none";
   btn1.onclick = function(){
     console.log('Je bent in level 1.');
+    clickAudio.play();
     naarDeGang();
   }
 }
@@ -48,10 +51,12 @@ function naarDeGang() {
   btn2.innerHTML = "Vlucht snel de gang uit";
   btn1.onclick = function(){
     console.log('Je bent in level 2.');
+    clickAudio.play();
     verstop();
   }
   btn2.onclick = function(){
     console.log('Je bent in level 2.');
+    clickAudio.play();
     vluchtgang();
   }
 }
@@ -168,10 +173,12 @@ function vluchtgang(){
   btn1.innerHTML = "Ga naar boven";
   btn2.innerHTML = "Ga naar beneden";
   btn1.onclick = function(){
+    clickAudio.play();
     winThree();
   }
   btn2.onclick = function(){
     console.log('Je bent in level 3.');
+    clickAudio.play();
     beneden();
   }
 }
@@ -185,7 +192,8 @@ function beneden(){
   btn1.style.display = "inline";
   btn1.onclick = function(){
     console.log('Je bent in level 4.');
-      buiten();
+    clickAudio.play();
+    buiten();
   }
 }
 
@@ -198,11 +206,13 @@ function buiten(){
   btn2.style.display = "inline";
   btn2.onclick = function(){
     console.log('Je bent in level 5.');
+    clickAudio.play();
     snelweg();
    }
    btn1.onclick = function(){
     console.log('Je bent in level 5.');
-     uitweg();
+    clickAudio.play();
+    uitweg();
    }
 }
 
@@ -214,10 +224,12 @@ function snelweg(){
   btn1.innerHTML = "Ga het bos in";
   btn1.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     bos();
   }
   btn2.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     stadIn();
   }
 }
@@ -229,10 +241,12 @@ function bos(){
   btn1.innerHTML = "Ga de schuilplaats in";
   btn2.innerHTML = "Ga terug naar de snelweg";
   btn1.onclick = function(){
+    clickAudio.play();
     dieFour();
   }
   btn2.onclick = function(){
     console.log('Je bent in level 7.');
+    clickAudio.play();
     gaTerug();
   }
 }
@@ -245,10 +259,12 @@ function gaTerug(){
   btn1.innerHTML = "Ga het bos in";
   btn1.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     bos();
   }
   btn2.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     stadIn();
   }
 }
@@ -261,6 +277,7 @@ function uitweg(){
   btn2.style.display = "none";
   btn1.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     zoekEten();
   }
 }
@@ -274,9 +291,11 @@ function uitwegTwo(){
   btn2.innerHTML = "Ga terug het stadje in";
   btn1.onclick = function(){
     console.log('Je bent in level 6.');
+    clickAudio.play();
     zoekEten();
   }
   btn2.onclick = function(){
+    clickAudio.play();
     stadIn();
    if (stadIn) {
      dieThree();
@@ -294,6 +313,7 @@ function zoekEten(){
   btn2.innerHTML = "Ga het keldertje in";
   btn1.onclick = function(){
     console.log('Je bent in level 8.');
+    clickAudio.play();
     if (heeftBrood == true) {
       console.log("Brood")
       gaWeg();
@@ -302,11 +322,13 @@ function zoekEten(){
     }
   }
     brood.onclick = function(){
+      clickAudio.play();
       brood.style.display = "none";
       heeftBrood = true;
     }
   btn2.onclick = function(){
     console.log('Je bent in level 8.');
+    clickAudio.play();
     if (heeftBrood == true) {
       console.log("Brood")
       kelder();
@@ -324,9 +346,11 @@ function gaWeg(){
   btn2.style.display = "inline";
   btn2.innerHTML = "Zoek in de stad naar een schuilplaats.";
   btn1.onclick = function(){
+    clickAudio.play();
     winOne();
   }
   btn2.onclick = function(){
+    clickAudio.play();
     winTwo();
   }
 }
@@ -339,10 +363,12 @@ function stadIn(){
   btn2.style.display = "inline";
   btn2.innerHTML = "Zoek in de stad naar een schuilplaats.";
   btn2.onclick = function(){
+    clickAudio.play();
     dieFive();
   }
   btn1.onclick = function(){
     console.log('Je bent in level 7.');
+    clickAudio.play();
     uitwegTwo();
   }
 }
@@ -355,17 +381,20 @@ function kelder(){
   btn2.style.display = "none";
   mars.style.display = "block";
   btn2.onclick = function(){
+    clickAudio.play();
     if (heeftMars == true) {
       dieTwo();
     }
   }
    mars.onclick = function(){
+    clickAudio.play();
     console.log('Je bent in level 8.');
      dieTwo();
    mars.style.display = "none";
    heeftMars = true;
   }
   btn1.onclick = function(){
+    clickAudio.play();
     gaWeg();
     mars.style.display = "none";
   }
